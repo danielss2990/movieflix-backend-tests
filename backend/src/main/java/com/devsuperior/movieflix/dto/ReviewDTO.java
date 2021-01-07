@@ -15,25 +15,25 @@ public class ReviewDTO implements Serializable {
 	@NotBlank(message = "Campo não pode ser vazio!")
 	private String text;
 	private Long movieId;
-	private Long userId;
+	private UserDTO user;
 	
 	public ReviewDTO() {
 		
 	}
 
-	public ReviewDTO(Long id, @NotBlank(message = "Campo não pode ser vazio!") String text, Long movieId, Long userId) {
+	public ReviewDTO(Long id, @NotBlank(message = "Campo não pode ser vazio!") String text, Long movieId, UserDTO user) {
 		super();
 		this.id = id;
 		this.text = text;
 		this.movieId = movieId;
-		this.userId = userId;
+		this.user = user;
 	}
 	
 	public ReviewDTO(Review entity) {
 		id = entity.getId();
 		text = entity.getText();
 		movieId = entity.getMovie().getId();
-		userId = entity.getUser().getId();
+		user = new UserDTO(entity.getUser());
 	}
 	
 	public Long getId() {
@@ -60,12 +60,13 @@ public class ReviewDTO implements Serializable {
 		this.movieId = movieId;
 	}
 
-	public Long getUserId() {
-		return userId;
+	
+	public UserDTO getUser() {
+		return user;
 	}
 
-	public void setUserId(Long userId) {
-		this.userId = userId;
+	public void setUser(UserDTO user) {
+		this.user = user;
 	}
 
 }
