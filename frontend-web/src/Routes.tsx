@@ -4,6 +4,7 @@ import Navbar from './core/components/Navbar';
 import Catalog from './pages/Catalog';
 import Details from './pages/Details';
 import Auth from './pages/Auth';
+import PrivateRoute from './core/components/Routes/PrivateRoute';
 
 const Routes = () => (
 
@@ -21,13 +22,13 @@ const Routes = () => (
                 <Auth />
             </Route>
             
-            <Route path="/catalog">
+            <PrivateRoute path="/catalog">
                 <Catalog />
-            </Route>
+            </PrivateRoute>
 
-            <Route path="/details">
+            <PrivateRoute path="/details">
                 <Details />
-            </Route>
+            </PrivateRoute>
 
         </Switch>
     </BrowserRouter>

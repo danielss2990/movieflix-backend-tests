@@ -1,6 +1,7 @@
 import axios, { Method } from "axios";
 import { CLIENT_ID, CLIENT_SECRET} from './auth';
 import qs from 'qs';
+import history from "./history";
 
 
 type RequestParams = {
@@ -28,6 +29,15 @@ export const makeRequest = ({ method = 'GET', url, data, params, headers }: Requ
     });
 }
 
+axios.interceptors.response.use(function (response) {
+    return response;
+}, function (error) {
+    if (error.response.status === 401) {
+        history.push('/auth/login');
+        
+    }
+    return Promise.reject(error);
+});
 
 export const makeLogin = (loginData: LoginData) => {
     const token = `${CLIENT_ID}:${CLIENT_SECRET}`;
