@@ -37,8 +37,6 @@ const Navbar = () => {
                             <text className="text-logout" >
                                 Sair
                             </text>
-
-
                         </a>
                     </>
                 )

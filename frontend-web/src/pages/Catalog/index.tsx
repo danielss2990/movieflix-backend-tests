@@ -1,9 +1,19 @@
 import React from 'react';
+import ProductCard from './components/ProductCard';
+import './styles.scss';
 
 const Catalog = () => {
     return (
-        <div className="admin-container">
-            
+        <div className="catalog-container">
+            <div className="catalog-products">
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+            </div>
         </div>
     );
 }
