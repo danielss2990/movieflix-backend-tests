@@ -28,7 +28,7 @@ const PrivateRoute = ({ children, path, allowedRoutes }: Props) => {
                     return (
                         <Redirect
                             to={{
-                                pathname: "/catalog",
+                                pathname: "/films",
                             }}
                         />
                     )

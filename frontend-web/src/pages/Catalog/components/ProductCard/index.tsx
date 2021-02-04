@@ -1,5 +1,6 @@
 import React from 'react';
 import { ReactComponent as FilmImage } from '../../../../core/assets/images/film.svg'
+import FilmTitleYearSubtitle from '../../../../core/components/FilmTitleYearSubtitile';
 import './styles.scss';
 
 const ProductCard = () => {
@@ -7,15 +8,7 @@ const ProductCard = () => {
 
         <div className="card-base border-radius-10 product-card">
             <FilmImage />
-            <div className="film-info">
-                <h6 className="film-name">
-                    O Retorno do Rei
-                </h6>
-                <div className="film-year">2013</div>
-                <div className="film-description">
-                    O olho do inimigo está se movendo.
-                </div>
-            </div>
+            <FilmTitleYearSubtitle title="O Retorno do Rei" year={2013} description="O olho do inimigo está se movendo."/>
         </div>
     );
 }

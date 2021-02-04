@@ -22,7 +22,7 @@ const Navbar = () => {
         <nav className="row bg-primary main-nav" >
             <div className="col-6 nav-logo-text">
                 <Link to="/">
-                    <h4 className="logo-text">MovieFlix</h4>
+                    <h4 className="logo-text font-weight-bold">MovieFlix</h4>
                 </Link>
             </div>
 

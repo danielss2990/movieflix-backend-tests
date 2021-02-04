@@ -23,7 +23,7 @@ const Login = () => {
     const history = useHistory();
     const location = useLocation<LocationState>();
 
-    const { from } = location.state || { from: { pathname: "/catalog" } };
+    const { from } = location.state || { from: { pathname: "/films" } };
     const onSubmit = (data: FormData) => {
         //chamar API de autenticação
         makeLogin(data)
