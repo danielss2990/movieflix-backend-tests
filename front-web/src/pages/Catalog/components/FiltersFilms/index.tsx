@@ -18,11 +18,11 @@ const FiltersFilms = ({ onSearch }: Props) => {
     const [genres, setGenres] = useState<Genre[]>([]);
     const [genre, setGenre] = useState<Genre>();
 
-
+  //setGenres(response.data.content)
     useEffect(() => {
       
-        makePrivateRequest({ url: '/genres/pagination' })
-            .then(response => setGenres(response.data.content))
+        makePrivateRequest({ url: '/genres' })
+            .then(response => setGenres(response.data))
     }, [])
 
     const handleChangeGenre = (genre: Genre) => {
@@ -34,6 +34,7 @@ const FiltersFilms = ({ onSearch }: Props) => {
         <div className="catalog-container">
             <div className="catalog-content-search row d-flex justify-content-center">
                 <Select options={genres}
+                    className="filter-background"
                     name="Genre"
                     key={`select-${genre?.id}`}
                     inputId="genries"

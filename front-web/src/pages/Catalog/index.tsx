@@ -16,7 +16,7 @@ const Catalog = () => {
     const [filmsResponse, setFilmsResponse] = useState<FilmsResponse>();
     const [isLoading, setIsLoading] = useState(false);
     const [activePage, setActivePage] = useState(0);
-    
+
     const getFilms = useCallback((filter?: FilterForm) => {
         const params = {
             page: activePage,
