@@ -21,7 +21,10 @@ export async function login(userInfo: AuthProps) {
             Authorization: TOKEN,
             'Content-Type': 'application/x-www-form-urlencoded'
         },
-    });
+    }).catch((error)=>{
+        console.log("Api call error");
+        alert(error.message);
+     });
 
     return result;
     
