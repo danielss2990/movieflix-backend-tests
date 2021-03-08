@@ -1,6 +1,5 @@
 package com.devsuperior.movieflix.services;
 
-import java.awt.print.Pageable;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;

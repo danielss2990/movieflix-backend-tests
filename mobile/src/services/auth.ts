@@ -18,20 +18,14 @@ export async function login(userInfo: AuthProps) {
         'oauth/token',
         data, {
         headers: {
-            Authorization: TOKEN,
+            'Authorization': TOKEN,
             'Content-Type': 'application/x-www-form-urlencoded'
         },
-    }).catch((error)=>{
-        console.log("Api call error");
-        alert(error.message);
-     });
+    });
 
-    return result;
-    
-    /*
     const {access_token} = result.data;
     setAsyncKeys('@token', access_token);
-    return result;*/
+    return result;
 }
 async function setAsyncKeys(key: string, value: string) {
     try{

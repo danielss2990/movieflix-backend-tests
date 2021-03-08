@@ -4,9 +4,7 @@ import java.io.Serializable;
 
 import javax.validation.constraints.NotBlank;
 
-import com.devsuperior.movieflix.entities.Movie;
 import com.devsuperior.movieflix.entities.Review;
-import com.devsuperior.movieflix.entities.User;
 
 public class ReviewDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
