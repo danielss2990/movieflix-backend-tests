@@ -25,17 +25,19 @@ const text = StyleSheet.create({
     title: {
         fontWeight: "700",
         fontSize: 32,
+        justifyContent:'center',
         textAlign: 'center',
-        marginBottom: 40,
+        marginBottom: 7,
         color: colors.white,
     },
     subTitle: {
-        marginTop: 40,
+        marginTop: 28,
         fontWeight: "400",
         fontSize: 16,
         color: colors.whiteIce,
+        justifyContent:'center',
         textAlign: 'center',
-        marginLeft: 60,
+        //marginLeft: 60,
         width: 243,
         paddingBottom: 20,
     },
@@ -49,9 +51,10 @@ const text = StyleSheet.create({
     },
     //Text Login
     titleLogin: {
-        marginTop: 100,
+        marginTop: 119,
         fontWeight: 'normal',
         fontSize: 30,
+        justifyContent:'center',
         textAlign: 'center',
         color: colors.white,
     },
@@ -78,7 +81,7 @@ const text = StyleSheet.create({
         lineHeight: 25,
         color: colors.white,
         marginTop: 20,
-        marginLeft: 15,
+        //marginLeft: 15,
     },
     catalog_year: {
         fontSize: 14,
@@ -86,7 +89,7 @@ const text = StyleSheet.create({
         lineHeight: 19,
         color: colors.orange,
         marginTop: 5,
-        marginLeft: 15,
+        //marginLeft: 15,
     },
     catalog_subTitle: {
         fontSize: 16,
@@ -94,7 +97,7 @@ const text = StyleSheet.create({
         lineHeight: 22,
         color: colors.grey,
         marginTop: 5,
-        marginLeft: 15,
+        //marginLeft: 15,
     },
     text_catalog_btn: {
         textTransform: 'uppercase',
@@ -105,13 +108,17 @@ const text = StyleSheet.create({
     },
     select: {
         color: colors.whiteIce,
-        fontSize: 16,
+        fontSize: 24,
         fontWeight: '400',
         marginTop: 10,
-        marginLeft: 16,
+        marginBottom:14,
+        //marginLeft: 16,
         lineHeight: 26,
-        width: 300,
+        width: 210,
         height: 20,
+        //alignItems:'center',
+        //justifyContent:'center',
+        
     },
     modal: {
         color: colors.black,
@@ -196,26 +203,54 @@ const text = StyleSheet.create({
 const theme = StyleSheet.create({
     container: {
         flex: 1,
+        justifyContent:'center',
         alignItems: "center",
     },
     card: {
         width: deviceWidth,
         height: deviceHeight,
         backgroundColor: colors.darkGrey,
+        justifyContent:'center',
+        alignItems:'center',
+        paddingTop:50,
+        paddingBottom: 50
+    },
+    cardHome: {
+        width: deviceWidth,
+        height: deviceHeight,
+        backgroundColor: colors.darkGrey,
+        alignItems:'center',
+        paddingTop:14,
+        paddingBottom: 14
+    },
+    cardLogin: {
+        width: deviceWidth,
+        height: deviceHeight,
+        backgroundColor: colors.darkGrey,
+        alignItems:'center',
+        paddingTop:14,
+        paddingBottom: 14
+    },
+    cardCatalogMovie: {
+        width: deviceWidth,
+        height: deviceHeight,
+        backgroundColor: colors.darkGrey,
+        justifyContent:'center',
         alignItems:'center',
         paddingTop:50,
         paddingBottom: 50
     },
     draw: {
-        width: 340,
+        width: 210,
         //height:10,
-        height: 250,
+        height: 210,
         marginTop: 80,
-        marginLeft: 40,
+        //marginLeft: 40,
+        justifyContent:'center',
         alignItems: 'center',
     },
     contentText: {
-        marginTop: 40,
+        marginTop: 28,
         paddingHorizontal: 20,
     },
     homeButton: {
@@ -226,7 +261,7 @@ const theme = StyleSheet.create({
         backgroundColor: colors.orange,
         borderRadius: 10,
         justifyContent: 'space-between',
-        marginLeft: 60,
+        //marginLeft: 60,
         marginTop: 30,
     },
     setaContent: {
@@ -249,7 +284,7 @@ const theme = StyleSheet.create({
     loginButton: {
         width: 340,
         height: 50,
-        marginTop: 80,
+        marginTop: 28,
         flexDirection: "row",
         alignItems: 'center',
         backgroundColor: colors.orange,
@@ -259,14 +294,16 @@ const theme = StyleSheet.create({
 
     },
     contenInput: {
-        marginTop: 50,
+        marginTop: 28,
     },
     textInput: {
         width: 340,
-        height: 50,
+        height: 49,
         backgroundColor: colors.white,
         borderRadius: 10,
-        marginTop: 30,
+        marginTop: 21,
+        justifyContent:'center',
+        alignItems:'center',
         marginLeft: 35,
         borderWidth: 1,
         paddingLeft: 20,
@@ -275,7 +312,7 @@ const theme = StyleSheet.create({
     },
     inputPassowrd: {
         flexDirection: "row",
-        marginTop: 32,
+        marginTop: 21,
         alignContent: "center",
 
     },
@@ -283,12 +320,15 @@ const theme = StyleSheet.create({
         width: 80,
         height: 30,
         justifyContent: 'center',
+        alignItems:'center',
         marginTop: 40,
         paddingRight: 20,
         marginLeft: -50,
     },
     eyes: {
-
+        justifyContent:"center",
+        alignItems:'center',
+        
     },
 
     setaLogin: {
@@ -327,18 +367,22 @@ const nav = StyleSheet.create({
 const catalog = StyleSheet.create({
     contentSelect: {
         height: 85,
-        width: 374,
+        width: 330,
         backgroundColor: colors.lightGray,
         borderRadius: 10,
-        marginLeft: 20,
+        justifyContent:'center',
+        alignItems:'center',
+        //marginLeft: 16,
         marginTop: 20,
     },
     contentMovie: {
-        width: 374,
+        width: 330,
         height: 410,
         backgroundColor: colors.lightGray,
         borderRadius: 10,
-        marginLeft: 20,
+        alignItems:'center',
+        justifyContent:'center',
+        //marginLeft: 10,
         marginTop: 20,
     },
     movie: {
@@ -347,28 +391,30 @@ const catalog = StyleSheet.create({
         marginTop: 20,
     },
     form_btn: {
-        width: 344,
+        width: 300,
         height: 40,
         borderWidth: 1,
         borderColor: colors.white,
         borderRadius: 10,
-        marginLeft: 15,
+        //marginLeft: 15,
         marginTop: 10,
         alignItems: 'center',
         justifyContent: "center",
     },
     cardSelect: {
-        width: 330,
+        width: 273,
         height: 50,
         borderWidth: 1,
         borderColor: colors.white,
         borderRadius: 10,
-        marginLeft: 20,
-        marginTop: 15,
-        flexDirection: 'row',
+        //marginLeft: 20,
+        //marginTop: 15,
+        alignItems: 'center',
+        justifyContent: "center",
+        //flexDirection: 'row',
     },
     seta: {
-        alignItems: 'flex-end',
+        alignItems: 'center',
         marginHorizontal: -20,
         marginTop: 18,
     },
@@ -381,7 +427,7 @@ const catalog = StyleSheet.create({
     },
     contentModal: {
         marginTop: "5%",
-        width: 300,
+        width: 280,
         backgroundColor: colors.white,
         alignItems: 'center',
         justifyContent: 'center',

@@ -12,7 +12,7 @@ const Home: React.FC = () => {
 
     return (
         <View style={theme.container}>
-            <View style={theme.card}>
+            <View style={theme.cardHome}>
                 <Image style={theme.draw} source={arrow} />
                 <View style={theme.contentText}>
                     <Text style={text.title}>Avalie filmes</Text>

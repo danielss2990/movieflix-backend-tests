@@ -21,7 +21,7 @@ const Login: React.FC = () => {
             password: ""
         }
     )
-    async function handleLogin() {       
+    async function handleLogin() {
         const data = await login(userInfo);
         setUserFetchData(data);
         n.navigate("CatalogMovie");
@@ -29,7 +29,7 @@ const Login: React.FC = () => {
 
     return (
         <View style={theme.container}>
-            <View style={theme.card}>
+            <View style={theme.cardLogin}>
                 <Text style={text.titleLogin}>LOGIN</Text>
                 <View style={theme.contenInput}>
                     <TextInput
@@ -61,10 +61,12 @@ const Login: React.FC = () => {
                             onPress={() => setHidePassword(!hidePassowrd)}
                             style={theme.toogle}
                         >
-                            <Image source={
-                                hidePassowrd ? eyesOpened : eyesClosed
-                            }
-                                style={theme.eyes} />
+                            {/*
+                                <Image source={
+                                    hidePassowrd ? eyesOpened : eyesClosed
+                                }
+                                    style={theme.eyes} />
+                            */}
                         </TouchableOpacity>
                     </View>
                     <TouchableOpacity

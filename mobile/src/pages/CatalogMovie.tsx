@@ -70,7 +70,7 @@ const CatalogMovie: React.FC = () => {
 
     return (
         <View style={theme.container}>
-            <View style={theme.card}>
+            <View style={theme.cardCatalogMovie}>
                 <ScrollView>
                     <Modal
                         visible={showGenres}
@@ -117,7 +117,7 @@ const CatalogMovie: React.FC = () => {
 
                                 }
                             </Text>
-                            <Image style={catalog.seta} source={setaDown} />
+                            {/*  <Image style={catalog.seta} source={setaDown} /> */}
                         </TouchableOpacity>
                     </View>
 
