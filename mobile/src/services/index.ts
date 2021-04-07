@@ -49,16 +49,32 @@ export async function getMoviesById(id: number){
     return res;
 }
 
-export async function saveAvaliation(data: object){
+export async function saveAvaliation(id: number, text:string){
     const authToken = await userToken(); 
+
+    const request = {
+        "text": text,
+        "movieId": id
+    }
+    /* 
+    const res = api.post(`/reviews/${id}`, text,{
+            headers:{
+                'Authorization': `Bearer ${authToken}`,
+            },
+        });
+    return res;
+
+    */
     
-    const res = api.post(`/reviews`, data,{
+    const res = api.post(`/reviews`, request,{
             headers:{
                 'Authorization': `Bearer ${authToken}`,
             },
         });
     return res;
 }
+
+
 export async function getGenres(){
 
     const authToken = await userToken(); 

@@ -130,8 +130,9 @@ const text = StyleSheet.create({
         fontSize: 24,
         fontWeight: 'bold',
         marginTop: 20,
-        marginLeft: 25,
+        //marginLeft: 45,
         lineHeight: 33,
+        
     },
 
     yearDetails:{
@@ -139,7 +140,7 @@ const text = StyleSheet.create({
         fontSize: 24,
         fontWeight: '700',
         marginTop: 15,
-        marginLeft: 25,
+        //marginLeft: 140,
         lineHeight: 33,
     },
     descriptionDetails:{
@@ -147,7 +148,7 @@ const text = StyleSheet.create({
         fontSize: 18,
         fontWeight: "normal",
         marginTop: 5,
-        marginLeft: 25,
+        //marginLeft: 110,
         lineHeight: 33,
     },
     titleSinopseDetails:{
@@ -155,7 +156,7 @@ const text = StyleSheet.create({
         fontSize: 22,
         fontWeight: "bold",
         marginTop: 15,
-        marginLeft: 25,
+        //marginLeft: 128,
         lineHeight: 30,
     },
     sinopse:{
@@ -175,7 +176,7 @@ const text = StyleSheet.create({
     },
     titleComment:{
         marginTop:12,
-        marginLeft: 30,
+        marginLeft: 110,
         color: colors.white,
         fontSize: 22,
         fontWeight: "bold",
@@ -232,6 +233,15 @@ const theme = StyleSheet.create({
         paddingBottom: 14
     },
     cardCatalogMovie: {
+        width: deviceWidth,
+        height: deviceHeight,
+        backgroundColor: colors.darkGrey,
+        justifyContent:'center',
+        alignItems:'center',
+        paddingTop:50,
+        paddingBottom: 50
+    },
+    cardDetailMovie: {
         width: deviceWidth,
         height: deviceHeight,
         backgroundColor: colors.darkGrey,
@@ -447,64 +457,69 @@ const catalog = StyleSheet.create({
 })
 const detailsMovie = StyleSheet.create({
     contentMovie:{
-        width:380,
+        width:330,
         height:760,
         marginTop:20,
-        marginLeft: 17,
+        marginLeft: 10,
         backgroundColor: colors.lightGray,
         borderRadius: 20,
         paddingBottom:20,
+        alignItems:'center',
+        justifyContent:'center',
     },
     image:{
-        width:380,
+        width:330,
         height:220,
         marginTop:15,
     }, 
     sinopse: {
-        width:335,
+        width:300,
         height:314,
         borderRadius:20,
         borderWidth: 1,
         borderColor: colors.white,
         marginTop:10,
-        marginLeft: 20,
+        //marginLeft: 15,
+
     }, 
     contentAvaliation:{
-        width:374,
+        width:330,
         height:210,
         borderRadius:20,
         backgroundColor: colors.lightGray,
         marginTop:18,
-        marginLeft: 17,
+        alignItems:'center',
+        justifyContent:'center',
+        marginLeft: 10,
 
     },
     avaliation:{
-        width:335,
+        width:300,
         paddingBottom: 80,
         borderRadius:20,
         backgroundColor: colors.white,
-        marginTop:15,
+        //marginTop:15,
         paddingTop: 10,
-        marginLeft: 20,
+        //marginLeft: 15,
         paddingLeft:20,
     },
     btnAvaliation:{
-        width: 335,
+        width: 300,
         height: 50,
         flexDirection: "row",
         alignItems: 'center',
         backgroundColor: colors.orange,
         borderRadius: 10,
         marginTop:13,
-        marginLeft:20,
+        //marginLeft:15,
         justifyContent: 'center',
 
     },
     contentComment:{
-        width:380,
+        width:330,
         height:300,
         marginTop:20,
-        marginLeft: 17,
+        marginLeft: 10,
         backgroundColor: colors.lightGray,
         borderRadius: 20,
         paddingBottom:20,
@@ -519,7 +534,7 @@ const detailsMovie = StyleSheet.create({
         marginTop:22,
     },
     inputComment:{
-        width: 334,
+        width: 280,
         height:70,
         marginLeft:25,
         marginTop:5,

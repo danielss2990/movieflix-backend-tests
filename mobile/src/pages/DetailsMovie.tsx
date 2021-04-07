@@ -8,23 +8,40 @@ import Toast from 'react-native-tiny-toast';
 
 import star from "../assets/star.png";
 
-const DetailsMovie = ({ route: { params: { id }, }, }) => {
 
+//({ route: { params: { id }, }, })
+
+type Route = {
+    params: Params;
+}
+
+type Params = {
+    id: number;
+}
+
+type Props = {
+    route: Route;
+}
+
+const DetailsMovie = ({ route }: Props) => {
+
+    const {params} = route;
+    const {id} = params;
     const navigation = useNavigation();
     const [userFetchData, setUserFetchData] = useState({});
     const [loading, setLoading] = useState(false);
 
     const [movie, setMovie] = useState({
         id: 0,
-        title: null,
-        subTitle: null,
-        year: null,
-        imgUrl: null,
-        synopsis: null,
+        title: '',
+        subTitle: '',
+        year: 0,
+        imgUrl: 'http://www.tiptoncommunications.com/components/com_easyblog/themes/wireframe/images/placeholder-image.png',
+        synopsis: '',
         reviews: [
             {
-                text: null,
-                userName: null,
+                text: '',
+                userName: '',
             }
         ],
 
@@ -44,17 +61,17 @@ const DetailsMovie = ({ route: { params: { id }, }, }) => {
     }
     async function handlerAvaliation(moveId: number) {
 
-        console.warn(userAvaliation);
+        //console.warn(userAvaliation);
 
-        // try {
-        //     setLoading(true),
-        //         await saveAvaliation(userAvaliation),
-        //         Toast.showSuccess('Obrigado pelo seu Comentário!');
-        //         navigation.navigate('DetailsMovie');
-        // } catch (res) {
-        //         Toast.show('Erro ao enviar seu comentário! Tente novamente.');
-        // }
-        // setLoading(false);
+         try {
+             setLoading(true),
+                 await saveAvaliation(userAvaliation.movieId, userAvaliation.text),
+                 Toast.showSuccess('Obrigado pelo seu Comentário!');
+                 navigation.navigate('DetailsMovie');
+         } catch (res) {
+                 Toast.show('Erro ao enviar seu comentário! Tente novamente.');
+         }
+         setLoading(false);
     }
 
     useEffect(() => {
@@ -62,11 +79,11 @@ const DetailsMovie = ({ route: { params: { id }, }, }) => {
     })
     return (
         <View style={theme.container}>
-            <View style={theme.card}>
+            <View style={theme.cardDetailMovie}>
                 <ScrollView>
                     {
                         loading ? <ActivityIndicator size="large" color="#00ff00" /> :
-                            <View style={detailsMovie.contentMovie}>
+                            <View style={detailsMovie.contentMovie} >
                                 <Text style={text.titleDetails}>{movie.title}</Text>
                                 <Image source={{ uri: movie.imgUrl }} style={detailsMovie.image} />
                                 <Text style={text.yearDetails}>{movie.year}</Text>
@@ -94,12 +111,17 @@ const DetailsMovie = ({ route: { params: { id }, }, }) => {
                             }
                         />
 
-                        <TextInput style={{ display: 'none' }}
+                        {
+                            /* 
+                                <TextInput style={{ display: 'none' }}
+                        
                             value={userAvaliation.movieId = movie.id}
-                            
                         >
-                        </TextInput>
-                        <TouchableOpacity style={detailsMovie.btnAvaliation} onPress={handlerAvaliation}>
+                        </TextInput>    
+                            */
+                        }
+                        
+                        <TouchableOpacity style={detailsMovie.btnAvaliation} onPress={() => handlerAvaliation(movie.id)}>
                             <Text style={text.btnAvaliation}>SALVAR AVALIAÇÃO</Text>
                         </TouchableOpacity>
                     </View>
