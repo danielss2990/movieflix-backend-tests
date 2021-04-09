@@ -56,17 +56,8 @@ export async function saveAvaliation(id: number, text:string){
         "text": text,
         "movieId": id
     }
-    /* 
-    const res = api.post(`/reviews/${id}`, text,{
-            headers:{
-                'Authorization': `Bearer ${authToken}`,
-            },
-        });
-    return res;
-
-    */
     
-    const res = api.post(`/reviews`, request,{
+    const res = await api.post(`/reviews`, request,{
             headers:{
                 'Authorization': `Bearer ${authToken}`,
             },

@@ -25,8 +25,8 @@ type Props = {
 
 const DetailsMovie = ({ route }: Props) => {
 
-    const {params} = route;
-    const {id} = params;
+    const { params } = route;
+    const { id } = params;
     const navigation = useNavigation();
     const [userFetchData, setUserFetchData] = useState({});
     const [loading, setLoading] = useState(false);
@@ -63,15 +63,15 @@ const DetailsMovie = ({ route }: Props) => {
 
         //console.warn(userAvaliation);
 
-         try {
-             setLoading(true),
-                 await saveAvaliation(userAvaliation.movieId, userAvaliation.text),
-                 Toast.showSuccess('Obrigado pelo seu Comentário!');
-                 navigation.navigate('DetailsMovie');
-         } catch (res) {
-                 Toast.show('Erro ao enviar seu comentário! Tente novamente.');
-         }
-         setLoading(false);
+        try {
+            setLoading(true),
+                await saveAvaliation(userAvaliation.movieId, userAvaliation.text),
+                Toast.showSuccess('Obrigado pelo seu Comentário!');
+            navigation.navigate('DetailsMovie');
+        } catch (res) {
+            Toast.show('Erro ao enviar seu comentário! Tente novamente.');
+        }
+        setLoading(false);
     }
 
     useEffect(() => {
@@ -112,15 +112,15 @@ const DetailsMovie = ({ route }: Props) => {
                         />
 
                         {
-                            /* 
-                                <TextInput style={{ display: 'none' }}
-                        
-                            value={userAvaliation.movieId = movie.id}
-                        >
-                        </TextInput>    
-                            */
+
+                            <TextInput style={{ display: 'none' }}
+
+                                value={userAvaliation.movieId = movie.id}
+                            >
+                            </TextInput>
+
                         }
-                        
+
                         <TouchableOpacity style={detailsMovie.btnAvaliation} onPress={() => handlerAvaliation(movie.id)}>
                             <Text style={text.btnAvaliation}>SALVAR AVALIAÇÃO</Text>
                         </TouchableOpacity>
