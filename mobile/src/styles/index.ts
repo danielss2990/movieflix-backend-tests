@@ -360,6 +360,14 @@ const nav = StyleSheet.create({
         lineHeight: 25,
         marginLeft: 50,
     },
+    textTitle2: {
+        fontWeight: "bold",
+        fontSize: 20,
+        color: colors.black,
+        lineHeight: 25,
+        //marginLeft: 50, do codigo antes de mexer
+        marginLeft: 10,
+    },
     btnExit: {
         width: 75,
         height: 30,
